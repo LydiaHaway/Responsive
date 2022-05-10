@@ -15,6 +15,20 @@ main {
   font-size: large;
 }
 
+#large,
+#medium,
+#small {
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+  margin: 20px;
+}
+
+#small,
+#medium {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
   body {
     background-color: rgb(42, 196, 42);
@@ -25,16 +39,24 @@ main {
     font-size: medium;
   }
 
-  #small {
+  .small {
     width: calc(200% / 3);
   }
 
-  #medium {
+  .medium {
     width: calc(100% / 3);
   }
 
-  #large {
+  .large {
     width: 100%;
+  }
+
+  #large {
+    display: none;
+  }
+
+  #medium {
+    display: block;
   }
 }
 
@@ -48,10 +70,18 @@ main {
     font-size: small;
   }
 
-  #small,
-  #medium,
-  #large {
+  .small,
+  .medium,
+  .large {
     width: 90%;
     margin: 10px;
+  }
+
+  #medium {
+    display: none;
+  }
+
+  #small {
+    display: block;
   }
 }
